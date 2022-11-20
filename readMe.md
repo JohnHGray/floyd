@@ -1,4 +1,4 @@
-# Floyd Warshall Algorithm in Python (Imperitive and Recursive)
+# Floyd Warshall Algorithms(Iterative and Recursive)
 
 ## Solve All Pairs Shortest Path (APSP) problems
 
@@ -20,4 +20,8 @@ graph = [[0, 7, NO_PATH, 8],
         ]
 
 MAX_LENGTH = len(graph[0])
+```
+
+```python
+pip install -r requirements.txt
 ```
