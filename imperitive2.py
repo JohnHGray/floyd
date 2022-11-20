@@ -1,9 +1,8 @@
 import itertools
-import math
+import timeit
 
 #no edge is no path or true client system infinity
-
-noPath = 99999
+noPath = float('inf')
 
 graph = [[0, 7, noPath, 8],
          [noPath, 0, 5, noPath],
@@ -19,24 +18,20 @@ def floyd(distance):
 
         # if start_node is equal to end_node
         # then distance equals zero
-
         if start_node == end_node:
             distance[start_node][end_node] = 0
             continue
 
         # return minima
-
         distance[start_node][end_node] = min(
                                             distance[start_node][end_node],
                                             distance[start_node][intermediate] +
                                             distance[intermediate][end_node]
                                             )
 
-    print(distance)
     print(graph)
-    print("--------------")
-    import timeit
-    print("Performance test using timeit:")
+    print("---------------------")
+    print("Performance duration in seconds")
     print (timeit.timeit())
-    print(graph)
+
 floyd(graph)
