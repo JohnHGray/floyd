@@ -1,7 +1,7 @@
 import itertools
 import timeit
 
-#no edge is no path or true client system infinity
+#no path or true client system positive infinity
 noPath = float('inf')
 
 graph = [[0, 7, noPath, 8],
@@ -11,6 +11,7 @@ graph = [[0, 7, noPath, 8],
 
 maxLength = len(graph[0])
 
+#definition of iterative function
 def floyd(distance):
 
     for intermediate, start_node, end_node in itertools.product(range(maxLength), range(maxLength),
@@ -29,6 +30,7 @@ def floyd(distance):
                                             distance[intermediate][end_node]
                                             )
 
+    #print shortest paths and performance duration
     print(graph)
     print("---------------------")
     print("Performance duration in seconds")
