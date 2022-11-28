@@ -50,12 +50,11 @@ def floyd(distance):
     return distance
 
 if __name__ == '__main__':
-    print(floyd(graph))
 
 # Print shortest paths and performance duration
     print("---------------------")
     print("(2) Shortest distances of (1):")
-    print(graph)
+    print(floyd(graph))
     print("---------------------")
     print("Performance duration of (1) and (2) in seconds:")
     print (timeit.timeit())
