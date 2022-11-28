@@ -6,12 +6,12 @@
 
 <jgray.7@liverpool.ac.uk>
 
-### Download requirements
+#### Download requirements
 
 ```bash
 pip install -r requirements.txt
 ```
-### View floydIterative.py or floydRecursive.py to see the given graph
+#### View floydIterative.py or floydRecursive.py to see the given graph
 
 ```python
 graph = [[0, 7, noPath, 8],
@@ -19,7 +19,7 @@ graph = [[0, 7, noPath, 8],
          [noPath, noPath, 0, 2],
          [noPath, noPath, noPath, 0]]
 ```
-### Run floydIterative.py or floydRecursive.py to generate equivalent solution
+#### Run floydIterative.py or floydRecursive.py to generate equivalent solution
 
 ```python
 graph = [[0, 7, 12, 8],
@@ -27,7 +27,7 @@ graph = [[0, 7, 12, 8],
          [noPath, noPath, 0, 2],
          [noPath, noPath, noPath, 0]]
 ```
-### Both files return overall performance or duration times in seconds such as
+#### Both files return overall performance or duration times in seconds such as
 
 ```python
 ---------------------
@@ -40,7 +40,7 @@ graph = [[0, 7, 12, 8],
 Performance duration of (1) and (2) in seconds:
 0.00661759999638889
 ```
-### Run testFloyd.py to perform three unit tests with successful test as follows
+#### Run testFloyd.py to perform three unit tests with successful test as follows
 
 ```python
 ---------------------
