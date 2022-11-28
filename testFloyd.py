@@ -1,7 +1,7 @@
 import unittest
 
-from floyd_recursive import shortestpath
-from floyd_recursive import floyd
+from floydRecursive import shortestpath
+from floydRecursive import floyd
 
 # Test the recursive function finds shortest intermediate path for pair 0,2 is 12
 class test1(unittest.TestCase):
