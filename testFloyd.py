@@ -1,6 +1,6 @@
 import unittest
 
-# Call in shortestPath and floyd functions
+# Call in recursive shortestPath floyd functions
 from floydRecursive import shortestPath
 from floydRecursive import floyd
 
@@ -37,13 +37,15 @@ class test3(unittest.TestCase):
                  [noPath, 0, 5, noPath],
                  [noPath, noPath, 0, 2],
                  [noPath, noPath, noPath, 0]]
-        maxLength = len(graph[0])
+        
         graphSolution = [[0, 7, 12, 8],
                          [noPath, 0, 5, 7],
                          [noPath, noPath, 0, 2],
                          [noPath, noPath, noPath, 0]]
         result = floyd(graph)
         self.assertEqual(result, graphSolution)
+        print('Graph Solution')
+        print(graphSolution)
 
 if __name__ == '__main__':
     unittest.main()
