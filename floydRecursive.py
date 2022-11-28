@@ -10,24 +10,24 @@ graph = [[0, 7, noPath, 8],
          [noPath, noPath, 0, 2],
          [noPath, noPath, noPath, 0]]
 
-# Print graph input for later comparison
+# Print graph input for later comparison with solution
 print("---------------------")
 print("(1) Given graph:")
 print(graph)
 
 maxLength = len(graph[0])
 
-# Floyd Recursion function
-def shortestpath(start, end, intermediate, distance):
+# Floyd recursion function
+def shortestPath(start, end, intermediate, distance):
     
     # Solve paths direct or intermediate
     if intermediate < 0:
         return(distance[start][end])
 
     # Find minima
-    return min(shortestpath(start, end, intermediate - 1, distance),
-               shortestpath(start, intermediate, intermediate - 1, distance) +
-               shortestpath(intermediate, end, intermediate - 1, distance))
+    return min(shortestPath(start, end, intermediate - 1, distance),
+               shortestPath(start, intermediate, intermediate - 1, distance) +
+               shortestPath(intermediate, end, intermediate - 1, distance))
 
 # Floyd function in itself
 def floyd(distance):
@@ -36,14 +36,14 @@ def floyd(distance):
     for startNode, endNode in itertools.product(range(maxLength),
                                                   range(maxLength)):
 
-        # If start is equal to end then
-        # distance equals zero and continue
+        # If start is equal to end then distance equals zero 
+        # and continue on to find shortest paths
         if startNode == endNode:
             distance[startNode][endNode] = 0
             continue
 
         # Find shortest distances
-        distance[startNode][endNode] = shortestpath(startNode,
+        distance[startNode][endNode] = shortestPath(startNode,
                                                       endNode,
                                                       maxLength - 1, distance)
     # Return the shortest distances

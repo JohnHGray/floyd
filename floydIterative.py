@@ -10,7 +10,7 @@ graph = [[0, 7, noPath, 8],
          [noPath, noPath, 0, 2],
          [noPath, noPath, noPath, 0]]
 
-# Print graph input for later comparison
+# Print graph input for later comparison with solution
 print("---------------------")
 print("(1) Given graph:")
 print(graph)
@@ -29,7 +29,7 @@ def floyd(distance):
             distance[start][end] = 0
             continue
 
-        # Calculate the shortest path between
+        # Calculate the shortest paths from start to end and via intermediate
         distance[start][end] = min(distance[start][end],distance[start][intermediate] + distance[intermediate][end])
                                             
     # Print shortest paths and performance duration
