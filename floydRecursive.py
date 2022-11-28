@@ -1,13 +1,19 @@
 import itertools
+import timeit
 
 # Setup variable for no path as infinity
 noPath = float('inf')
 
-# Setup graph input
+# Create square matrix for input
 graph = [[0, 7, noPath, 8],
          [noPath, 0, 5, noPath],
          [noPath, noPath, 0, 2],
          [noPath, noPath, noPath, 0]]
+
+# Print graph input for later comparison
+print("---------------------")
+print("(1) Given graph:")
+print(graph)
 
 maxLength = len(graph[0])
 
@@ -30,7 +36,8 @@ def floyd(distance):
     for startNode, endNode in itertools.product(range(maxLength),
                                                   range(maxLength)):
 
-        # Fact that if we are going where we are we are already there and move on
+        # If start is equal to end then
+        # distance equals zero and continue
         if startNode == endNode:
             distance[startNode][endNode] = 0
             continue
@@ -44,3 +51,11 @@ def floyd(distance):
 
 if __name__ == '__main__':
     print(floyd(graph))
+
+# Print shortest paths and performance duration
+    print("---------------------")
+    print("(2) Shortest distances of (1):")
+    print(graph)
+    print("---------------------")
+    print("Performance duration of (1) and (2) in seconds:")
+    print (timeit.timeit())
