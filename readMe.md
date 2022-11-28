@@ -10,12 +10,12 @@
 
 
 
-```python
+```bash
 pip install -r requirements.txt
 ```
 ### Given a matrix
 
-```bash
+```python
 graph = [[0, 7, noPath, 8],
          [noPath, 0, 5, noPath],
          [noPath, noPath, 0, 2],
