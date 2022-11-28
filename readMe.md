@@ -1,15 +1,17 @@
 # From Iterative to Recursive:  Floyd-Warshall Algorithm 
 
-## Solve All Pairs Shortest Path (APSP) problems
+## Solve All Pairs Shortest Path (APSP) problems in Python 3.10.7
 
 ### Given edge-weighted and directed graphs
 
 <jgray.7@liverpool.ac.uk>
 
+### Download requirements
+
 ```bash
 pip install -r requirements.txt
 ```
-### Given a matrix
+### View floydIterative.py or floydRecursive.py to see the given graph
 
 ```python
 graph = [[0, 7, noPath, 8],
@@ -17,7 +19,7 @@ graph = [[0, 7, noPath, 8],
          [noPath, noPath, 0, 2],
          [noPath, noPath, noPath, 0]]
 ```
-### Run floydIterative.py or floydRecursive.py to generate equivalent Solution Matrix
+### Run floydIterative.py or floydRecursive.py to generate equivalent solution
 
 ```python
 graph = [[0, 7, 12, 8],
