@@ -4,8 +4,6 @@
 
 ### Given edge-weighted and directed graphs
 
-<jgray.7@liverpool.ac.uk>
-
 #### Download requirements
 
 ```bash
