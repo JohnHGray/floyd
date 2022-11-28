@@ -4,7 +4,7 @@ import unittest
 from floydRecursive import shortestPath
 from floydRecursive import floyd
 
-# Test the recursive function solve shortest intermediate path for pair 0,2 as 12
+# Test the shortest path solution for pair [0,2] is 12
 class test1(unittest.TestCase):
 
     def testSubProblem1(self):
@@ -16,7 +16,7 @@ class test1(unittest.TestCase):
         result = shortestPath(0, 2, 3, graph)
         self.assertEqual(result, 12)
 
-# Test the recursive function solves shortest intermediate path for pair 1,3 as 7
+# Test the shortest path solution for pair [1,3] is 7
 class test2(unittest.TestCase):
 
     def testSubProblem2(self):
@@ -28,7 +28,7 @@ class test2(unittest.TestCase):
         result = shortestPath(1, 3, 3, graph)
         self.assertEqual(result, 7)
 
-# Test the function solution overall
+# Test the floyd function solution overall for all pairs
 class test3(unittest.TestCase):
 
     def testSolution(self):
