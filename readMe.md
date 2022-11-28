@@ -27,7 +27,7 @@ graph = [[0, 7, 12, 8],
          [noPath, noPath, 0, 2],
          [noPath, noPath, noPath, 0]]
 ```
-#### Both files return overall performance or duration times in seconds such as
+#### Both files return overall performance or duration times in seconds, where noPath is a floating infinity denoted 'inf'
 
 ```python
 ---------------------
