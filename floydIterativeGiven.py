@@ -1,5 +1,6 @@
 # Python3 Program for Floyd Warshall Algorithm
- 
+import timeit
+
 # Number of vertices in the graph
 V = 4
  
@@ -92,3 +93,5 @@ if __name__ == "__main__":
   # Function call
   floydWarshall(graph)
 # This code is contributed by Mythri J L
+print (timeit.timeit())
+# Submitted and timed
