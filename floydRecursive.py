@@ -5,6 +5,7 @@ import timeit
 noPath = float('inf')
 
 # Create square matrix for input
+# Updated values compared to given graph to create one more solution
 graph = [[0, 7, noPath, 8],
          [noPath, 0, 5, noPath],
          [noPath, noPath, 0, 2],
