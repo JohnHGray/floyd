@@ -58,3 +58,4 @@ if __name__ == '__main__':
     print("---------------------")
     print("Performance duration of (1) and (2) in seconds:")
     print (timeit.timeit())
+# Submitted and timed
